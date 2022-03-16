@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+  --dark-cyan: hsl(185, 75%, 39%);
+  --very-dark-cyan: hsl(229, 23%, 23%);
+  --dark-grayish-blue: hsl(227, 10%, 46%);
+
+  --dark-gray: hsl(0, 0%, 59%);
+}
+
+.sr-only {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+h2 {
+  font-family: 'Kumbh Sans';
+}
+
+p {
+  font-weight: lighter;
+  font-family: 'Kumbh Sans';
+}
+
+.list-item {
+  text-align: center;
+}
+
+.list {
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+  flex-wrap: wrap;
+  padding: 1.44444rem 1rem;
+  flex-direction: row;
+}
+
+.list > * {
+  list-style-type: none;
+  position: relative;
+}
+.list > *::before {
+  content: '\200B';
+  height: 0;
+  display: block;
+}
+
+.list::before {
+  content: '';
+  height: 1px;
+  background: #969696;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
+}
+
+.list-item {
+  color: #6a6f81;
+  text-align: center;
+  margin: 0.3333rem;
+}
+
+.list-item:first-of-type {
+  margin-left: 0;
+}
+
+.list-item:last-of-type {
+  margin-right: 0;
+}
+
+.list-number,
+.list-label {
+  display: block;
+}
+
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  font-family: 'Kumbh Sans', sans-serif;
+  overflow: hidden;
+  display: flex;
+  position: relative;
+  align-items: center;
+  background-color: var(--dark-cyan);
+  z-index: -1;
+  justify-content: center;
+}
+
+.container::before,
+.container::after {
+  position: absolute;
+  background-size: cover;
+  content: '';
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+}
+
+.container::before {
+  top: 0;
+  left: 0;
+  background: url('./images/bg-pattern-top.svg') right bottom no-repeat;
+}
+
+.container::after {
+  top: 100%;
+  left: 100%;
+  background: url('./images/bg-pattern-bottom.svg') left top no-repeat;
+  background-clip: content-box;
+}
+
+.circles {
+  background-size: contain;
+  position: absolute;
+  display: flex;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  width: 100%;
+  align-items: center;
+  background-color: white;
+  border-radius: 1rem;
+  position: relative;
+  max-width: 20rem;
+  z-index: 1;
+  box-shadow: 0 4rem 4rem -2rem #14808a;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: -30%;
+  width: 100%;
+  background: url('./images/bg-pattern-card.svg') no-repeat center;
+  transform: translateY(100%);
+  height: 7.7777rem;
+  background-size: auto;
+  background-size: cover;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.second-section {
+  display: flex;
+  border-top: 2px var(--dark-grayish-blue);
+  margin: 1rem auto;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.first-section {
+  border-radius: 7px 7px 0 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.location {
+  font-size: 0.77777rem;
+  order: 3;
+  margin-top: 0.6666rem;
+  margin-bottom: 0.233rem;
+}
+
+.title {
+  order: 2;
+  margin-top: 1.4444rem;
+}
+
+.age,
+.name {
+  font-size: 1rem;
+  display: inline-block;
+}
+
+.name {
+  font-weight: 700;
+  color: #2d3248;
+}
+
+.age {
+  margin-top: 0.33333rem;
+  font-weight: 400;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.444444rem 1rem;
+  padding-top: 7.77778rem;
+}
+
+.list-label {
+  font-size: 0.66667rem;
+  margin-top: 0.3333rem;
+  letter-spacing: 1px;
+}
+
+.list-number {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #2d3248;
+}
+
+.avatar {
+  border-radius: 50%;
+  order: 1;
+  margin-top: -2.777778rem;
+  border: 0.27778rem solid white;
+  z-index: 1;
+}
